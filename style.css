@@ -161,3 +161,12 @@ h3 {
     max-width: 540px;
     margin: 0 auto;
 }
+
+svg {
+    width: 20px;
+    fill: #007AFF;
+}
+
+.qa__content__inner-head:checked ~ p {
+    visibility: hidden;
+}
