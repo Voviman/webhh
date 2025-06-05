@@ -46,6 +46,11 @@ h3 {
     text-decoration: none;
 }
 
+.nav > a > img {
+    width: 50px;
+  
+}
+
 .nav > ul {
     display: flex;
     justify-content: space-between;
@@ -78,8 +83,8 @@ h3 {
 }
 
 .contentbox__content > img {
-    width: 555px;
-    height: 380px;
+    width: 450px;
+   
 }
 
 .contentbox__content--inner {
@@ -114,7 +119,7 @@ h3 {
 }
 
 .featuresbox__content {
-    max-width: 350px;
+    max-width: 330px;
 }
 
 .testimonials {
@@ -167,8 +172,18 @@ svg {
     fill: #007AFF;
 }
 
-.qa__content__inner-head:checked ~ p {
-    visibility: hidden;
+.qa__content__inner-head{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.qa__answer {
+    display: none;
+    padding: 10px 0;
+    color: #333;
+    transition: all 0.3s ease;
 }
 
 .anim-truckbody { 
