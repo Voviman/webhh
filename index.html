@@ -8,7 +8,29 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/1.png" type="image/x-icon">
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "yUbQP4K87uPcCM6d4",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     
                 
 </head>
@@ -17,12 +39,10 @@
         <div class="nav">
             <a href=""><img src="/2.png" alt=""></a>
             <ul>
-            <a href=""><li>One</li></a>
-            <a href=""><li>Two</li></a>
-            <a href=""><li>Three</li></a>
-            <a href=""><li>Four</li></a>
-            <a href=""><li>Five</li></a>
-            <a href=""><li>Six</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#faq"><li>FAQ</li></a>
+            <a href="#contact-form"><li>Join US!</li></a>
+        
         </div>
 
         <div class="contentbox">
@@ -55,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="contentbox__content">
+            <div id="#about" class="contentbox__content">
                 <div class="contentbox__content--inner">
                     <h3>Join Hundreds of Drivers Who Found Better Jobs with Haul Hiring</h3>
                     <p>We simplify the hiring process so you can focus on what matters — hitting the road and getting paid.</p>
@@ -128,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="qa">
+            <div id="#faq" class="qa">
                 <div class="qa__content">
                     <h2>Frequently Asked Questions</h2>
                     <p>Find answers to the most common questions about working with Haul Hiring. </p>
@@ -179,10 +199,59 @@
                     <div class="wheels"></div>
                 </div> 
             </div>
+
+            <div class="qa">
+                <form id="contact-form", class="form-container">
+                    <h2>Start now</h2>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="email" required>
+                    <input type="tel" name="phone" id="phone" placeholder="+1 (___) ___-__-__" required>
+                    <select name="experience" id="experience" required
+                >
+                        <option value="" disabled selected>Experience</option>
+                        <option value="0">0</option>
+                        <option value="1">1 year</option>
+                        <option value="2">2 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+          
+            <div class="footer">
+                <div class="footer__content">
+                    <p>© 2025 Haul Hiring. All rights reserved.</p>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            
             
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+    <script>
+        (function(){
+        emailjs.init("yUbQP4K87uPcCM6d4"); // Замените на ваш Public Key из EmailJS
+        })();
 
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        emailjs.sendForm('service_guedb8b', 'template_l2jcwnb', this)
+            .then(() => {
+            alert('Сообщение отправлено!');
+            this.reset();
+            }, (error) => {
+            alert('Ошибка отправки: ' + JSON.stringify(error));
+            });
+        });
+    </script>
 
     <script>
     document.querySelectorAll('.qa__content__inner-head').forEach((head) => {
