@@ -2,7 +2,7 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     color: #007AFF;
-    font-size: 18px;
+    font-size: 20px;
 
 }
 
@@ -76,10 +76,14 @@ h3 {
 
 .contentbox__content {
     margin-top: 100px;
-    padding-top: 50px;
+    padding: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(0, 101, 242, 0.589);
+    background-blend-mode: difference;
+    border-radius: 30px;
+    color: #fff;
 }
 
 .contentbox__content > img {
@@ -109,6 +113,7 @@ h3 {
     background: #007AFF;
     padding: 12px 20px;
     color: white;
+    border-radius: 10px;
     
 }
 
@@ -132,6 +137,7 @@ h3 {
     max-width: 350px;
     padding: 24px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
     
 }
 
@@ -162,8 +168,7 @@ h3 {
 }
 
 .qa {
-    padding-top: 120px;
-    max-width: 540px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -186,12 +191,25 @@ svg {
     transition: all 0.3s ease;
 }
 
+.emailform {
+  background-color: rgba(0, 101, 242, 0.589);
+  padding: 0px;
+  border-radius: 30px;
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+#faq {
+  margin-top: 120px;
+}
+
 .anim-truckbody { 
-  background: #007AFF;
+  margin-bottom: 30px;
   overflow: hidden;
   font-family: 'Open Sans', sans-serif;
 }
 .loop-wrapper {
+  background: #007AFF;
   margin: 0 auto;
   position: relative;
   display: block;
@@ -200,6 +218,10 @@ svg {
   overflow: hidden;
   border-bottom: 3px solid #fff;
   color: #fff;
+  border-radius: 20px;
+}
+.loop-wrapper > h2 {
+  padding-left: 10%;
 }
 .mountain {
   position: absolute;
@@ -343,14 +365,30 @@ svg {
 input, textarea, button, select {
   padding: 10px;
   font-size: 16px;
+  border: none;
+  appearance: none;
+  background: none;
+  font: inherit;
+  color: black;
+  outline: none;
+
 }
+
+input::placeholder {
+  color: black;
+}
+
+
 input[type="submit"] {
   background-color: #007AFF;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 30px;
+  border-style: none;
 }
 input[type="submit"]:hover {
   background-color: #0065F2;
+  border-radius: 30px;
 }
 
