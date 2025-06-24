@@ -400,3 +400,160 @@ input[type="submit"]:hover {
   border-radius: 30px;
 }
 
+.nav_hamburger {
+    display: none;
+}
+
+.hamburger {
+    display: none; /* Скрыт на десктопе */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007AFF;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Уменьшаем базовый размер шрифта */
+    }
+    .hamburger {
+        display: block; /* Показываем кнопку на мобильных */
+    }
+    .nav_hamburger {
+      display: block;
+  }
+
+    h1 {
+        font-size: 36px; /* Уменьшаем размер заголовка */
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .wrapper {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .nav {
+        flex-direction: column; /* Вертикальная навигация */
+        gap: 10px;
+    }
+
+    .nav > ul {
+        flex-direction: column; /* Ссылки в столбец */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .social li {
+        padding-left: 0; /* Убираем отступы */
+    }
+
+    .contentbox__content {
+        flex-direction: column; /* Вертикальное расположение */
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .contentbox__content > img {
+        width: 100%; /* Изображение на всю ширину */
+        max-width: 300px;
+    }
+
+    .contentbox__content--inner {
+        max-width: 100%; /* Полная ширина текста */
+        text-align: center;
+    }
+
+    .action_content {
+        flex-direction: column; /* Кнопки в столбец */
+        gap: 10px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .action_content > a {
+        width: 100%; /* Кнопки на всю ширину */
+        text-align: center;
+    }
+
+    .featuresbox {
+        flex-direction: column; /* Вертикальное расположение */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .featuresbox__content {
+        max-width: 100%; /* Полная ширина */
+        text-align: center;
+    }
+
+    .testimonials {
+        flex-direction: column; /* Вертикальное расположение */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .testimonials__content {
+        max-width: 100%; /* Полная ширина */
+        text-align: center;
+    }
+
+    .testimonials__content > p {
+        max-width: 100%; /* Убираем ограничение ширины текста */
+    }
+
+    .qa {
+        max-width: 100%; /* Полная ширина */
+        padding: 0 10px;
+    }
+
+    .emailform {
+        padding: 15px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .form-container {
+        padding: 0 10px;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 14px; /* Уменьшаем шрифт для форм */
+    }
+
+    .loop-wrapper {
+        width: 100%; /* Анимация на всю ширину */
+        height: 150px; /* Уменьшаем высоту */
+    }
+
+    .mountain,
+    .hill {
+        transform: scale(0.5); /* Уменьшаем масштаб гор и холмов */
+    }
+
+    .truck {
+        width: 70px; 
+        height: 40px;
+    }
+
+    .wheels {
+      height: 15px;
+      margin-bottom: 0;
+    
+    }
+
+    .tree,
+    .tree:nth-child(2),
+    .tree:nth-child(3) {
+        height: 60px; /* Уменьшаем размер деревьев */
+    }
+}
