@@ -63,9 +63,9 @@ h3 {
     color: #007AFF;
 }
 
-.nav > ul > a > li {
+.social li {
     list-style: none;
-    padding-left: 10px;
+    padding-left: 40px;
     font-weight: 600;
 }
 
@@ -369,13 +369,21 @@ input, textarea, button, select {
   appearance: none;
   background: none;
   font: inherit;
-  color: black;
+  color: #fff;
   outline: none;
 
 }
 
 input::placeholder {
-  color: black;
+  color: #fff;
+}
+
+select {
+  background-image: url("/32213.png");
+  background-repeat: no-repeat;
+  background-position: right 0.5em center;
+  background-size: 1em;
+  background-color: rgba(0, 101, 242, 0.589);
 }
 
 
